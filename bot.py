@@ -24,4 +24,4 @@ async def on_message(message):
         await message.channel.send("pong")
 
 keep_alive()
-client.run(os.getenv("Discord_TOKEN"))
+client.run(os.getenv("DISCORD_TOKEN"))
