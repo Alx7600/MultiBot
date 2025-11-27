@@ -1,6 +1,7 @@
 import discord
 from dotenv import load_dotenv
 import os
+from keep_alive import keep_alive
 load_dotenv()
 
 intents = discord.Intents.default()
@@ -22,4 +23,5 @@ async def on_message(message):
     if message.content.startswith("!ping"):
         await message.channel.send("pong")
 
+keep_alive()
 client.run(os.getenv("Discord_TOKEN"))
